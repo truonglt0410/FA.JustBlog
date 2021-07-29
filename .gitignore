@@ -13,3 +13,5 @@
 /src/FA.JustBlog/packages
 /src/FA.JustBlog/FA.JustBlog.Data/bin/Debug
 /src/FA.JustBlog/FA.JustBlog.Services/bin/Debug
+/src/FA.JustBlog/FA.JustBlog.Common/bin/Debug
+/src/FA.JustBlog/FA.JustBlog.Common/obj/Debug
