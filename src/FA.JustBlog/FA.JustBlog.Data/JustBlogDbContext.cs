@@ -30,7 +30,7 @@ namespace FA.JustBlog.Data
                 {
                     pt.MapLeftKey("PostId");
                     pt.MapRightKey("TagId");
-                    pt.ToTable("PostTags");
+                    pt.ToTable("PostTags","common");
                 });
         }
     }
