@@ -53,18 +53,12 @@
   <ItemGroup>
     <Compile Include="Infrastructure\BaseRepositories\GenericRepository.cs" />
     <Compile Include="Infrastructure\BaseRepositories\IGenericRepository.cs" />
-    <Compile Include="Infrastructure\IPostRepository.cs" />
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="JustBlogDbContext.cs" />
     <Compile Include="DbInitializer.cs" />
-    <Compile Include="Infrastructure\PostRepository.cs" />
-    <Compile Include="Migrations\202107300236339_InitialCreate.cs" />
-    <Compile Include="Migrations\202107300236339_InitialCreate.designer.cs">
-      <DependentUpon>202107300236339_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107300239090_ChangeShemaPostTag.cs" />
-    <Compile Include="Migrations\202107300239090_ChangeShemaPostTag.designer.cs">
-      <DependentUpon>202107300239090_ChangeShemaPostTag.cs</DependentUpon>
+    <Compile Include="Migrations\202108020258349_InitialCreate.cs" />
+    <Compile Include="Migrations\202108020258349_InitialCreate.designer.cs">
+      <DependentUpon>202108020258349_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,11 +75,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107300236339_InitialCreate.resx">
-      <DependentUpon>202107300236339_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107300239090_ChangeShemaPostTag.resx">
-      <DependentUpon>202107300239090_ChangeShemaPostTag.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108020258349_InitialCreate.resx">
+      <DependentUpon>202108020258349_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

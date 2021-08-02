@@ -56,8 +56,10 @@
     <Compile Include="CategoryService.cs" />
     <Compile Include="ICategoryService.cs" />
     <Compile Include="IPostService.cs" />
+    <Compile Include="ITagService.cs" />
     <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TagService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FA.JustBlog.Common\FA.JustBlog.Common.csproj">

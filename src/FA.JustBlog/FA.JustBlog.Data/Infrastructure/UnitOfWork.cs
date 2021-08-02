@@ -1,5 +1,4 @@
-﻿using FA.JustBlog.Data;
-using FA.JustBlog.Data.Infrastructure.BaseRepositories;
+﻿using FA.JustBlog.Data.Infrastructure.BaseRepositories;
 using FA.JustBlog.Models.BaseEntities;
 using FA.JustBlog.Models.Common;
 using System.Threading.Tasks;
@@ -28,10 +27,10 @@ namespace FA.JustBlog.Data.Infrastructure
         public IGenericRepository<Tag> TagRepository =>
             _tagRepository ?? new GenericRepository<Tag>(_dbContext);
 
-        private IPostRepository _bookRepository;
+        private IGenericRepository<Post> _postRepository;
 
-        public IPostRepository PostRepository =>
-            _bookRepository ?? new PostRepository(_dbContext);
+        public IGenericRepository<Post> PostRepository =>
+            _postRepository ?? new GenericRepository<Post>(_dbContext);
 
         #region Methods
         public int SaveChanges()
@@ -52,7 +51,7 @@ namespace FA.JustBlog.Data.Infrastructure
 
         public void Dispose()
         {
-            _dbContext.Dispose();
+            this._dbContext.Dispose();
         }
         #endregion
     }

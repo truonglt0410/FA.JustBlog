@@ -28,10 +28,11 @@
                         Id = c.Guid(nullable: false),
                         Title = c.String(nullable: false, maxLength: 255),
                         ShortDescription = c.String(nullable: false, maxLength: 1000),
+                        ImageUrl = c.String(maxLength: 255),
                         PostContent = c.String(nullable: false),
                         UrlSlug = c.String(nullable: false, maxLength: 255),
                         Published = c.Boolean(nullable: false),
-                        PostedOn = c.DateTime(nullable: false),
+                        PublishedDate = c.DateTime(nullable: false),
                         CategoryId = c.Guid(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         InsertedAt = c.DateTime(nullable: false),
@@ -57,7 +58,7 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.PostTags",
+                "common.PostTags",
                 c => new
                     {
                         PostId = c.Guid(nullable: false),
@@ -73,13 +74,13 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.PostTags", "TagId", "common.Tags");
-            DropForeignKey("dbo.PostTags", "PostId", "common.Posts");
+            DropForeignKey("common.PostTags", "TagId", "common.Tags");
+            DropForeignKey("common.PostTags", "PostId", "common.Posts");
             DropForeignKey("common.Posts", "CategoryId", "common.Categories");
-            DropIndex("dbo.PostTags", new[] { "TagId" });
-            DropIndex("dbo.PostTags", new[] { "PostId" });
+            DropIndex("common.PostTags", new[] { "TagId" });
+            DropIndex("common.PostTags", new[] { "PostId" });
             DropIndex("common.Posts", new[] { "CategoryId" });
-            DropTable("dbo.PostTags");
+            DropTable("common.PostTags");
             DropTable("common.Tags");
             DropTable("common.Posts");
             DropTable("common.Categories");
