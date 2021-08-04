@@ -149,6 +149,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryManagementController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostManagementController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TagManagementController.cs" />
+    <Compile Include="Areas\Admin\ViewModels\CategoryViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\PostViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\TagViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -386,6 +393,24 @@
     <Content Include="assets\vendors\linericon\fonts\Linearicons-Free.ttf" />
     <Content Include="assets\vendors\linericon\fonts\Linearicons-Free.woff" />
     <Content Include="assets\vendors\linericon\fonts\Linearicons-Free.woff2" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryManagement\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryManagement\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryManagement\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryManagement\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryManagement\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PostManagement\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\PostManagement\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\PostManagement\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\PostManagement\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PostManagement\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TagManagement\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TagManagement\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TagManagement\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TagManagement\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TagManagement\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -493,8 +518,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Shared\_PartialFooter.cshtml" />
-    <Content Include="Views\Posts\LastestPosts.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Posts\_LastestPosts.cshtml" />
+    <Content Include="Views\Posts\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
