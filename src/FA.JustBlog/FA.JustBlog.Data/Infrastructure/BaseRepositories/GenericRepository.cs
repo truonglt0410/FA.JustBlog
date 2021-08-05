@@ -135,7 +135,7 @@ namespace FA.JustBlog.Data.Infrastructure.BaseRepositories
 
         public virtual IQueryable<T> Get(Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-            string includeProperties = "")
+            string includeProperties = "", bool canLoadDeleted = false)
         {
             IQueryable<T> query = DbSet;
 
@@ -143,7 +143,10 @@ namespace FA.JustBlog.Data.Infrastructure.BaseRepositories
             {
                 query = query.Where(filter);
             }
-
+            if (canLoadDeleted == false)
+            {
+                query = query.Where(x => x.IsDeleted == canLoadDeleted);
+            }
             foreach (var includeProperty in
                 includeProperties.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
