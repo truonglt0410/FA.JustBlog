@@ -1,0 +1,14 @@
+﻿<aside class="single_sidebar_widget popular_post_widget">
+    <h3 class="widget_title">Lastest Posts</h3>
+    @foreach (var item in Model)
+    {
+        <div class="media post_item">
+            <img style="width : 150px;" src="../assets/images/@item.ImageUrl" alt="@item.ImageUrl" />
+            <div class="media-body">
+                <a href="#"><h6>@item.Title</h6></a>
+                <p>@item.PublishedDate</p>
+            </div>
+        </div>
+    }
+    <div class="br"></div>
+</aside>
