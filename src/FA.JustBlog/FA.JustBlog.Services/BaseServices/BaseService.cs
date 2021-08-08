@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace FA.JustBlog.Services.BaseServices
 {
-    public class BaseServices<TEntity> : IBaseService<TEntity> where TEntity : BaseEntity
+    public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : BaseEntity
     {
         protected readonly IUnitOfWork _unitOfWork;
 
-        public BaseServices(IUnitOfWork unitOfWork)
+        public BaseService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
@@ -29,7 +29,7 @@ namespace FA.JustBlog.Services.BaseServices
             return _unitOfWork.SaveChanges();
         }
 
-        public async Task<int> AddAsync(TEntity entity)
+        public virtual async Task<int> AddAsync(TEntity entity)
         {
             if (entity == null)
             {

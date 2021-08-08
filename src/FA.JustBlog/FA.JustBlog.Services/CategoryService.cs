@@ -4,7 +4,7 @@ using FA.JustBlog.Services.BaseServices;
 
 namespace FA.JustBlog.Services
 {
-    public class CategoryService : BaseServices<Category>, ICategoryService
+    public class CategoryService : BaseService<Category>, ICategoryService
     {
         public CategoryService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {

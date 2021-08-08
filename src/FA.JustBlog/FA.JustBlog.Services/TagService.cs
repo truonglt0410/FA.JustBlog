@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FA.JustBlog.Services
 {
-    public class TagService : BaseServices<Tag>, ITagService
+    public class TagService : BaseService<Tag>, ITagService
     {
         public TagService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {

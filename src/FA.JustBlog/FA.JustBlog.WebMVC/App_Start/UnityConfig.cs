@@ -1,3 +1,4 @@
+using FA.JustBlog.Data;
 using FA.JustBlog.Data.Infrastructure;
 using FA.JustBlog.Data.Infrastructure.BaseRepositories;
 using FA.JustBlog.Models.Common;
@@ -46,10 +47,11 @@ namespace FA.JustBlog.WebMVC
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterSingleton<JustBlogDbContext, JustBlogDbContext>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
             container.RegisterType<IGenericRepository<Category>, GenericRepository<Category>>();
             container.RegisterType<IGenericRepository<Tag>, GenericRepository<Tag>>();
-            container.RegisterType<IGenericRepository<Category>, GenericRepository<Category>>();
+            container.RegisterType<IGenericRepository<Post>, GenericRepository<Post>>();
             container.RegisterType<ICategoryService, CategoryService>();
             container.RegisterType<IPostService, PostService>();
             container.RegisterType<ITagService, TagService>();

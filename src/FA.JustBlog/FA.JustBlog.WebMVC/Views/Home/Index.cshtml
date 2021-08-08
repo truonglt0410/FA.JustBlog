@@ -1,26 +1,49 @@
-﻿@model IEnumerable<FA.JustBlog.Models.Common.Post>
+﻿@model Paginated<Post>
 @{
     ViewBag.Title = "Home Page";
 }
 
+    <div class="row">
+        <div class="col-lg-8">
+            @foreach (var item in Model)
+            {
+                @Html.Partial("_PostOverview", item)
+            }
 
-@foreach (var item in Model)
-{
-    <div class="item">
-        <div class="post_s_item">
-            <div class="post_img">
-                <img class="img-fluid" src="../assets/images/@item.ImageUrl" alt="@item.ImageUrl">
-            </div>
-            <div class="post_text">
-                <a class="cat" href="#">@item.Category.Name</a>
-                <a href="../Posts/Detail/@item.Id"><h4>@item.Title</h4></a>
-                <p>@item.ShortDescription</p>
-                <div class="date">
-                    <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> @item.PublishedDate</a>
-                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i></a>
-                </div>
-            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    @{
+                        var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+                        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+                        ViewBag.PageRange = 3;
+                    }
+                    <li class="page-item">
+                        <a href="@Url.Action("Index", "Home", new {  pageIndex=1 })"
+                           class="btn page-link @prevDisabled"><<</a>
+                    <li class="page-item">
+                        <a href="@Url.Action("Index", "Home", new {  pageIndex=(Model.PageIndex - 1 <= 0 ? 1 : Model.PageIndex - 1) })"
+                           class="btn page-link @prevDisabled"><</a>
+                    </li>
+                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    {
+                        if (i >= Model.PageIndex - ViewBag.PageRange && i <= Model.PageIndex + ViewBag.PageRange)
+                        {
+                            <li class="page-item">
+                                <a class="@(i==Model.PageIndex ? "Current" : "") page-link"
+                                   href="@Url.Action("Index", "Home", new {  pageIndex=i })">@i</a>
+                            </li>
+                        }
+                    }
+                    <li class="page-item">
+                        <a href="@Url.Action("Index", "Home", new {  pageIndex=(Model.PageIndex + 1 > Model.TotalPages ? Model.TotalPages : Model.PageIndex + 1)})"
+                           class="btn page-link @nextDisabled">></a>
+                    <li class="page-item">
+                        <a href="@Url.Action("Index", "Home", new { pageIndex=(Model.TotalPages) })"
+                           class="btn page-link @nextDisabled">>></a>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-4">
+            @Html.Partial("_RightMenu")
         </div>
     </div>
-    <hr class="my-4" />
-}
