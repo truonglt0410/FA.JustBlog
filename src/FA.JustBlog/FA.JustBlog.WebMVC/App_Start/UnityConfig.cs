@@ -3,6 +3,7 @@ using FA.JustBlog.Data.Infrastructure;
 using FA.JustBlog.Data.Infrastructure.BaseRepositories;
 using FA.JustBlog.Models.Common;
 using FA.JustBlog.Services;
+using FA.JustBlog.WebMVC.Areas.Identity.Controllers;
 using FA.JustBlog.WebMVC.Controllers;
 using System;
 
@@ -54,6 +55,10 @@ namespace FA.JustBlog.WebMVC
 
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<ManageController>(new InjectionConstructor());
+
+            container.RegisterType<RolesAdminController>(new InjectionConstructor());
+            container.RegisterType<UsersAdminController>(new InjectionConstructor());
+            
 
             container.RegisterType<IGenericRepository<Category>, GenericRepository<Category>>();
             container.RegisterType<IGenericRepository<Tag>, GenericRepository<Tag>>();
