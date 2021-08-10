@@ -30,8 +30,8 @@ namespace FA.JustBlog.WebMVC.Controllers
         public ActionResult Menu()
         {
             var categories = _categoryServices.GetAll();
-            var popularCategories = categories.OrderByDescending(x => x.Posts.Count).Take(4);
-            var leftCategories = categories.OrderByDescending(x => x.Posts.Count).Skip(4);
+            var popularCategories = categories.OrderByDescending(x => x.Posts.Count).Take(2);
+            var leftCategories = categories.OrderByDescending(x => x.Posts.Count).Skip(2);
             var categoryMenuViewModel = new CategoryMenuViewModel()
             {
                 PopularCategory = popularCategories,
