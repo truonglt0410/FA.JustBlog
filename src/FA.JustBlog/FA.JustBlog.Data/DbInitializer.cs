@@ -118,9 +118,13 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "Post 01",
-                    UrlSlug = "post-01",
-                    ShortDescription = "This is Post 01",
+                    Title = "MCSE boot camps have its supporters and its detractors",
+                    UrlSlug = "MCSE-boot-camps-have-its-supporters-and-its-detractors",
+                    ShortDescription = "MCSE boot camps have its supporters and " +
+                    "its detractors. Some people do not understand why " +
+                    "you should have to spend money on boot camp when " +
+                    "you can get the MCSE study materials yourself at " +
+                    "a fraction of the camp price. However, who has the willpower",
                     ImageUrl = "blog-1.jpg",
                     PostContent = "Content post 01",
                     PublishedDate = DateTime.Now,
@@ -132,9 +136,13 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "Post 02",
-                    UrlSlug = "post-02",
-                    ShortDescription = "This is Post 02",
+                    Title = "MCSE boot camps have its supporters and its detractors",
+                    UrlSlug = "MCSE-boot-camps-have-its-supporters-and-its-detractors",
+                    ShortDescription = "MCSE boot camps have its supporters and " +
+                    "its detractors. Some people do not understand why " +
+                    "you should have to spend money on boot camp when " +
+                    "you can get the MCSE study materials yourself at " +
+                    "a fraction of the camp price. However, who has the willpower",
                     ImageUrl = "blog-2.jpg",
                     PostContent = "Content post 02",
                     PublishedDate = DateTime.Now,
@@ -146,9 +154,12 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "Post 03",
-                    UrlSlug = "post-03",
-                    ShortDescription = "This is Post 03",
+                    Title = "Which is the best website platform",
+                    UrlSlug = "which-is-the-best-website-platform",
+                    ShortDescription = "WordPress is free, open source, " +
+                    "and comes with thousands of pre-built website designs " +
+                    "and extensions. It is extremely flexible and works with " +
+                    "almost every third-party tool and service available to website owners.",
                     ImageUrl = "blog-3.jpg",
                     PostContent = "Content post 03",
                     PublishedDate = DateTime.Now,
@@ -160,9 +171,12 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "Post 04",
-                    UrlSlug = "post-04",
-                    ShortDescription = "This is Post 04",
+                    Title = "How to make the most of this create a website tutorial?",
+                    UrlSlug = "how-to-make-the-most-of-this-create-a-website-tutorial?",
+                    ShortDescription = "This is a step by step tutorial on how " +
+                    "to make a website. We have divided it into different steps, " +
+                    "and we’ll walk you through everything from start to finish. " +
+                    "Just follow along the instructions, and you’ll have a professional looking website in the end",
                     ImageUrl = "blog-4.jpg",
                     PostContent = "Content post 04",
                     PublishedDate = DateTime.Now,
@@ -174,9 +188,11 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "Post 05",
-                    UrlSlug = "post-05",
-                    ShortDescription = "This is Post 05",
+                    Title = "How much does a WordPress website cost?",
+                    UrlSlug = "how-much-does-a-WordPress-website-cost?",
+                    ShortDescription = "The answer to this question really " +
+                    "depends on what kind of website you are trying to build. " +
+                    "We have written a 2000 word guide explaining how much does it really cost to build a website",
                     ImageUrl = "blog-5.jpg",
                     PostContent = "Content post 05",
                     PublishedDate = DateTime.Now,
@@ -188,9 +204,11 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "Post 06",
-                    UrlSlug = "post-06",
-                    ShortDescription = "This is Post 06",
+                    Title = "How Many WordPress Categories Should You Have?",
+                    UrlSlug = "How-Many-WordPress-Categories-Should-You-Have?",
+                    ShortDescription = "There’s no specific number of categories " +
+                    "that you should have. In most cases, you’ll want somewhere " +
+                    "between 5 and 10 in order to properly categorize your posts and make your site easy to browse.",
                     ImageUrl = "blog-6.jpg",
                     PostContent = "Content post 06",
                     PublishedDate = DateTime.Now,
