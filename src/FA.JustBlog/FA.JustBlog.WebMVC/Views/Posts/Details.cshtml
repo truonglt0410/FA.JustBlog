@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="navigation-area">
+                @*<div class="navigation-area">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                             <div class="thumb">
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
                 <div class="comments-area">
                     <h4>@Model.Comments.Count @(Model.Comments.Count <= 1 ? "Comment" : "Comments")</h4>
                     @foreach (var item in Model.Comments)
@@ -110,7 +110,7 @@
                     }
 
                 </div>
-                <div class="comment-form">
+                @*<div class="comment-form">
                     <h4>Leave a Reply</h4>
                     <form>
                         <div class="form-group form-inline">
@@ -129,7 +129,7 @@
                         </div>
                         <a href="#" class="primary-btn submit_btn">Post Comment</a>
                     </form>
-                </div>
+                </div>*@
             </div>
             <div class="col-lg-4">
                 <div class="blog_right_sidebar">

@@ -60,6 +60,7 @@
     <Compile Include="BaseServices\BaseService.cs" />
     <Compile Include="BaseServices\IBaseService.cs" />
     <Compile Include="CategoryService.cs" />
+    <Compile Include="CommentService.cs" />
     <Compile Include="ICategoryService.cs" />
     <Compile Include="ICommentService.cs" />
     <Compile Include="IPostService.cs" />

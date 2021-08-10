@@ -29,5 +29,9 @@ namespace FA.JustBlog.Services
         Task<IEnumerable<Post>> GetMostViewPostsAsync(int size);
 
         Task<IEnumerable<Post>> GetHighestPostsAsync(int size);
+
+        IEnumerable<Post> GetMostViewedPost(int size);
+
+        Task<IEnumerable<Post>> GetHighestPosts(int size);
     }
 }

@@ -76,5 +76,7 @@ namespace FA.JustBlog.Data
 
             }
         }
+
+        public System.Data.Entity.DbSet<FA.JustBlog.Models.Common.Comment> Comments { get; set; }
     }
 }

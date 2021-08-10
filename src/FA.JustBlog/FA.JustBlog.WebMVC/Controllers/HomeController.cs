@@ -2,10 +2,8 @@
 using FA.JustBlog.Services;
 using FA.JustBlog.WebMVC.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 namespace FA.JustBlog.WebMVC.Controllers
@@ -39,6 +37,8 @@ namespace FA.JustBlog.WebMVC.Controllers
             };
             return PartialView("_Menu", categoryMenuViewModel);
         }
+
+        
 
         public ActionResult About()
         {

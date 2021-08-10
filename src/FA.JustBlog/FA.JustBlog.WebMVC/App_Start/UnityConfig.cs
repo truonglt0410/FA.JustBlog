@@ -63,9 +63,11 @@ namespace FA.JustBlog.WebMVC
             container.RegisterType<IGenericRepository<Category>, GenericRepository<Category>>();
             container.RegisterType<IGenericRepository<Tag>, GenericRepository<Tag>>();
             container.RegisterType<IGenericRepository<Post>, GenericRepository<Post>>();
+            container.RegisterType<IGenericRepository<Comment>, GenericRepository<Comment>>();
             container.RegisterType<ICategoryService, CategoryService>();
             container.RegisterType<IPostService, PostService>();
             container.RegisterType<ITagService, TagService>();
+            container.RegisterType<ICommentService, CommentService>();
         }
     }
 }

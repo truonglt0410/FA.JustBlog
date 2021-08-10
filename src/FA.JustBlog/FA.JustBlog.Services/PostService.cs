@@ -90,5 +90,15 @@ namespace FA.JustBlog.Services
         {
             return await _unitOfWork.PostRepository.GetQuery().Where(p => p.Published == published).ToListAsync();
         }
+
+        public IEnumerable<Post> GetMostViewedPost(int size)
+        {
+            return _unitOfWork.PostRepository.GetQuery().OrderByDescending(x => x.ViewCount).Take(size).ToList();
+        }
+
+        public async Task<IEnumerable<Post>> GetHighestPosts(int size)
+        {
+            return await _unitOfWork.PostRepository.GetQuery().OrderByDescending(x => x.Rate).Take(size).ToListAsync();
+        }
     }
 }
