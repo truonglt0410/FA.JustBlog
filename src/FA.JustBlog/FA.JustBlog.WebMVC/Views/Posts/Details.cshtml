@@ -54,8 +54,11 @@
                 </div>
                 
                 <div class="comments-area" id="comment-area">
-                    <h4>@Model.Comments.Count @(Model.Comments.Count<=1?"Comment":"Comments")</h4>
-                    @Html.Partial("_CommentArea", Model.Comments)
+                    @*Add new post and back to home click to new post then error System.NullReferenceException:
+                        Object reference not set to an instance of an object.*@
+                    @*<h4>@Model.Comments.Count @(Model.Comments.Count<=1?"Comment":"Comments")</h4>
+                        @Html.Partial("_CommentArea", Model.Comments)*@
+                    <h6>Comment</h6>
                 </div>
                 
             </div>

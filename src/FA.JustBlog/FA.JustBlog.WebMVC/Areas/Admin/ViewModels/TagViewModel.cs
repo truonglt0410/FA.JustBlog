@@ -6,9 +6,9 @@ using System.Web;
 
 namespace FA.JustBlog.WebMVC.Areas.Admin.ViewModels
 {
-    public class TagViewModel
+    public class TagViewModel : BaseViewModel
     {
-        public Guid Id { get; set; }
+        
 
         [Required(ErrorMessage = "The {0} is required")]
         [StringLength(255, ErrorMessage = "The {0} must between {2} and {1} characters", MinimumLength = 3)]

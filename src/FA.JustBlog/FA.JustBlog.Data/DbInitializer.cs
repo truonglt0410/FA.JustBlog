@@ -128,7 +128,10 @@ namespace FA.JustBlog.Data
                     Published = true,
                     Category = categories.Single(x => x.Name == categories[0].Name),
                     Tags = new List<Tag>{tag1, tag2,tag3},
-                    ImageSlider = "post-s-2.jpg"
+                    ImageSlider = "post-s-1.jpg",
+                    ViewCount = 30,
+                    RateCount = 16,
+                    TotalRate = 68
                 },
                 new Post
                 {
@@ -143,7 +146,10 @@ namespace FA.JustBlog.Data
                     Published = true,
                     Category = categories.Single(x => x.Name == categories[3].Name),
                     Tags = new List<Tag>{tag1, tag4,tag3},
-                    ImageSlider = "post-s-4.jpg"
+                    ImageSlider = "post-s-4.jpg",
+                    ViewCount = 42,
+                    RateCount = 61,
+                    TotalRate = 88
                 },
                 new Post
                 {
@@ -158,7 +164,10 @@ namespace FA.JustBlog.Data
                     Published = true,
                     Category = categories.Single(x => x.Name == categories[1].Name),
                     Tags = new List<Tag>{tag5, tag2,tag3},
-                    ImageSlider = "post-s-3.jpg"
+                    ImageSlider = "post-s-3.jpg",
+                    ViewCount = 88,
+                    RateCount = 66,
+                    TotalRate = 688
                 },
                 new Post
                 {
@@ -173,7 +182,10 @@ namespace FA.JustBlog.Data
                     Published = true,
                     Category = categories.Single(x => x.Name == categories[2].Name),
                     Tags = new List<Tag>{tag1, tag5,tag3},
-                    ImageSlider = "post-s-2.jpg"
+                    ImageSlider = "post-s-2.jpg",
+                    ViewCount = 8,
+                    RateCount = 6,
+                    TotalRate = 68
                 },
                 new Post
                 {
@@ -188,7 +200,10 @@ namespace FA.JustBlog.Data
                     Published = true,
                     Category = categories.Single(x => x.Name == categories[1].Name),
                     Tags = new List<Tag>{tag2,tag3},
-                    ImageSlider = "post-s-1.jpg"
+                    ImageSlider = "post-s-1.jpg",
+                    ViewCount = 88,
+                    RateCount = 66,
+                    TotalRate = 888
                 },
                 new Post
                 {
@@ -203,7 +218,10 @@ namespace FA.JustBlog.Data
                     Published = true,
                     Category = categories.Single(x => x.Name == categories[0].Name),
                     Tags = new List<Tag>{tag6,tag3},
-                    ImageSlider = "post-s-4.jpg"
+                    ImageSlider = "post-s-4.jpg",
+                    ViewCount = 66,
+                    RateCount = 16,
+                    TotalRate = 68
                 }
             };
             context.Categories.AddRange(categories);
