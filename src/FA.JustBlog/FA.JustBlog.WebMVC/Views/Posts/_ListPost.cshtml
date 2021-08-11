@@ -4,13 +4,14 @@
     <h3>@ViewBag.PartialViewTitle</h3>
     @foreach (var item in Model)
     {
-        <a href="@Url.Action("Details", "Posts", new {@id = item.Id })" class="list-group-item list-group-item-action">
+        <a href="@Url.Action("Details", "Posts", new { year = item.PublishedDate.Year, month = item.PublishedDate.Month.ToString("D2"), urlSlug = item.UrlSlug})" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">@item.Title</h5>
-                @*<small>3 days ago</small>*@
+
             </div>
             <p class="mb-1">@item.ShortDescription</p>
             <small>@item.PublishedDate</small>
+            @*<small>@Html.Action("ConvertTimePublished", "Posts", new { item.PublishedDate })</small>*@
         </a>
     }
 </div>

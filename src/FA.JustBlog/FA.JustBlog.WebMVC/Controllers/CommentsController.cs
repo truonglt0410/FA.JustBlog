@@ -17,10 +17,6 @@ namespace FA.JustBlog.WebMVC.Controllers
             _commentServices = commentServices;
         }
 
-        public ActionResult GetCommentByPost(Guid id)
-        {
-            var comments = Task.Run(() => _commentServices.GetCommentsForPostAsync(id)).Result;
-            return PartialView("_Comment", comments);
-        }
+        
     }
 }

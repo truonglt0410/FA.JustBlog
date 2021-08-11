@@ -100,5 +100,10 @@ namespace FA.JustBlog.Services
         {
             return await _unitOfWork.PostRepository.GetQuery().OrderByDescending(x => x.Rate).Take(size).ToListAsync();
         }
+
+        public async Task<Post> FindPostAsync(int year, int month, string title)
+        {
+            return await _unitOfWork.PostRepository.GetQuery().FirstOrDefaultAsync(x => x.PublishedDate.Year == year && x.PublishedDate.Month == month && x.UrlSlug.Equals(title));
+        }
     }
 }

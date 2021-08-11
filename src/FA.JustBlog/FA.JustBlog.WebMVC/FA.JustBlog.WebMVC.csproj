@@ -1311,6 +1311,8 @@
     <Content Include="Views\Comments\Edit.cshtml" />
     <Content Include="Views\Comments\Index.cshtml" />
     <Content Include="Views\Comments\_Comment.cshtml" />
+    <Content Include="Views\Home\_PostSlider.cshtml" />
+    <Content Include="Views\Shared\_CommentArea.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
