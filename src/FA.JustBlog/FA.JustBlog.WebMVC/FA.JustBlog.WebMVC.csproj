@@ -998,6 +998,7 @@
     <Content Include="assets\js\respond.min.js" />
     <Content Include="assets\js\stellar.js" />
     <Content Include="assets\js\theme.js" />
+    <Content Include="assets\scss\customize.css" />
     <Content Include="assets\vendors\animate-css\animate.css" />
     <Content Include="assets\vendors\animate-css\wow.min.js" />
     <Content Include="assets\vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
