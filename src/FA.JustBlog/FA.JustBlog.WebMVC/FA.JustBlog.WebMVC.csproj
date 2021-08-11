@@ -194,7 +194,7 @@
     <Compile Include="Areas\Admin\Controllers\CategoryManagementController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostManagementController.cs" />
     <Compile Include="Areas\Admin\Controllers\TagManagementController.cs" />
-    <Compile Include="Areas\Admin\ViewModels\CategoryViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModels\BaseViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\PostViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\TagViewModel.cs" />
     <Compile Include="Areas\Identity\Controllers\RolesAdminController.cs" />
@@ -202,6 +202,7 @@
     <Compile Include="Areas\Identity\IdentityAreaRegistration.cs" />
     <Compile Include="Areas\Identity\ViewModels\AdminViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -440,6 +441,7 @@
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\css\breadcrumb.css" />
+    <Content Include="assets\css\customize.css" />
     <Content Include="assets\css\font-awesome.min.css" />
     <Content Include="assets\css\responsive.css" />
     <Content Include="assets\css\Site.css" />
@@ -457,6 +459,7 @@
     <Content Include="assets\images\blog-4.jpg" />
     <Content Include="assets\images\blog-5.jpg" />
     <Content Include="assets\images\blog-6.jpg" />
+    <Content Include="assets\img\footer.png" />
     <Content Include="assets\img\home-blog\blog-5.jpg" />
     <Content Include="assets\img\home-blog\blog-6.jpg" />
     <Content Include="assets\images\bootstrap-solid.svg" />
@@ -987,6 +990,7 @@
     <Content Include="assets\js\jquery.form.js" />
     <Content Include="assets\js\jquery.validate.min.js" />
     <Content Include="assets\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="assets\js\justblog.js" />
     <Content Include="assets\js\mail-script.js" />
     <Content Include="assets\js\modernizr-2.8.3.js" />
     <Content Include="assets\js\popper.js" />
@@ -994,6 +998,7 @@
     <Content Include="assets\js\respond.min.js" />
     <Content Include="assets\js\stellar.js" />
     <Content Include="assets\js\theme.js" />
+    <Content Include="assets\scss\customize.css" />
     <Content Include="assets\vendors\animate-css\animate.css" />
     <Content Include="assets\vendors\animate-css\wow.min.js" />
     <Content Include="assets\vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
@@ -1301,6 +1306,14 @@
     <Content Include="Views\Account\DisplayEmail.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Posts\_PopularPosts.cshtml" />
+    <Content Include="Views\Comments\Create.cshtml" />
+    <Content Include="Views\Comments\Delete.cshtml" />
+    <Content Include="Views\Comments\Details.cshtml" />
+    <Content Include="Views\Comments\Edit.cshtml" />
+    <Content Include="Views\Comments\Index.cshtml" />
+    <Content Include="Views\Comments\_Comment.cshtml" />
+    <Content Include="Views\Home\_PostSlider.cshtml" />
+    <Content Include="Views\Shared\_CommentArea.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

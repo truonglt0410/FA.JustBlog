@@ -50,14 +50,59 @@ namespace FA.JustBlog.WebMVC.Controllers
             return PartialView("_ListPost", lastestPosts);
         }
 
-        public async Task<ActionResult> Details(Guid id)
+        public async Task<ActionResult> Details(int year, int month, string urlSlug)
         {
-            var post = await _postService.GetByIdAsync(id);
+            var post = await _postService.FindPostAsync(year, month, urlSlug);
             if (post == null)
             {
                 return HttpNotFound();
             }
+            ViewBag.PostTitle = post.Title;
+            ViewBag.PublishedDate = ConvertTimePublished(post.PublishedDate);
             return View(post);
+        }
+
+        public string ConvertTimePublished(DateTime publishedDate)
+        {
+            const int second = 1;
+            const int minute = 60 * second;
+            const int hour = 60 * minute;
+            const int day = 24 * hour;
+            const int month = 30 * day;
+
+            var time = new TimeSpan(DateTime.Now.Ticks - publishedDate.Ticks);
+            double interval = Math.Abs(time.TotalSeconds);
+
+            if (interval < 1 * minute)
+            {
+                return time.Seconds == 1 ? "one second ago" : time.Seconds + " seconds ago";
+            }
+
+            if (interval < 59 * minute)
+            {
+                return time.Minutes == 1 ? "one minute ago" : time.Minutes + " minutes ago";
+            }
+
+            if (interval < 24 * hour)
+            {
+                return time.Hours == 1 ? "an hour ago" : time.Hours + " hours ago";
+            }
+
+            if (interval < 30 * day)
+            {
+                return time.Days == 1 ? "one day ago" : time.Days + " days ago";
+            }
+
+            if (interval < 12 * month)
+            {
+                int months = Convert.ToInt32(Math.Floor((double)time.Days / 30));
+                return months == 1 ? "one month ago" : months + " months ago";
+            }
+            else
+            {
+                int years = Convert.ToInt32(Math.Floor((double)time.Days / 365));
+                return years == 1 ? "one year ago" : years + " years ago";
+            }
         }
     }
 }

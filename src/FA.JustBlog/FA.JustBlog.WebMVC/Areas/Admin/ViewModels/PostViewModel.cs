@@ -7,9 +7,9 @@ using System.Web.Mvc;
 
 namespace FA.JustBlog.WebMVC.Areas.Admin.ViewModels
 {
-    public class PostViewModel
+    public class PostViewModel : BaseViewModel
     {
-        public Guid Id { get; set; }
+        
 
         [Required(ErrorMessage = "The {0} is required")]
         [StringLength(255, ErrorMessage = "The {0} must between {2} and {1} characters", MinimumLength = 3)]
@@ -22,6 +22,9 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.ViewModels
         [StringLength(255, ErrorMessage = "The {0} must between {2} and {1} characters", MinimumLength = 4)]
         public string ImageUrl { get; set; }
 
+        [StringLength(255, ErrorMessage = "The {0} must between {2} and {1} characters", MinimumLength = 4)]
+        public string ImageSlider { get; set; }
+
         [Required(ErrorMessage = "The {0} is required")]
         public string PostContent { get; set; }
 
@@ -32,6 +35,15 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.ViewModels
         public bool Published { get; set; }
 
         public Guid CategoryId { get; set; }
+
+        [Required(ErrorMessage = "The {0} is required")]
+        public int ViewCount { get; set; }
+
+        [Required(ErrorMessage = "The {0} is required")]
+        public int RateCount { get; set; }
+
+        [Required(ErrorMessage = "The {0} is required")]
+        public int TotalRate { get; set; }
 
         public IEnumerable<Guid> SelectedTagIds { get; set; }
 

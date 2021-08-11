@@ -7,46 +7,14 @@ using System.Threading.Tasks;
 
 namespace FA.JustBlog.Services
 {
-    public interface ICommentServices : IBaseService<Comment>
+
+    public interface ICommentService : IBaseService<Comment>
     {
-        Task<int> AddCommentAsync(int postId, string commentName, string commentEmail,
-            string commentTitle, string commentBody);
+        Task<int> AddCommentAsync(int postId, string commentName, string commentEmail, string commentTitle, string commentBody);
 
-        Task<IEnumerable<Comment>> GetCommentForPostAsync(Post post);
+        Task<IEnumerable<Comment>> GetCommentsForPostAsync(Guid postId);
 
-        Task<IEnumerable<Comment>> GetCommentForPostAsync(Guid postId);
-    }
-
-    public class CommentServices : BaseService<Comment>, ICommentServices
-    {
-        public CommentServices(IUnitOfWork unitOfWork) : base(unitOfWork)
-        {
-        }
-
-        public async Task<int> AddCommentAsync(int postId, string commentName, string commentEmail, string commentTitle, string commentBody)
-        {
-            var comment = new Comment()
-            {
-                Id = Guid.NewGuid(),
-                Name = commentName,
-                Email = commentEmail,
-                CommentHeader = commentTitle,
-                CommentText = commentBody,
-                CommentTime = DateTime.Now
-            };
-            _unitOfWork.CommentRepository.Add(comment);
-            return await _unitOfWork.SaveChangesAsync();
-        }
-
-        public Task<IEnumerable<Comment>> GetCommentForPostAsync(Post post)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Comment>> GetCommentForPostAsync(Guid postId)
-        {
-            throw new NotImplementedException();
-        }
+        Task<IEnumerable<Comment>> GetCommentsForPostAsync(Post post);
     }
 }
 
