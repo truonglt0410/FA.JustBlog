@@ -21,7 +21,7 @@ namespace FA.JustBlog.WebMVC.Controllers
         public async Task<ActionResult> Details(Guid id)
         {
             var category = await _categoryServices.GetByIdAsync(id);
-            ViewBag.CategoryName = category.Name;
+            //ViewBag.CategoryName = category.Name;
             var posts = await _postServices.GetPostsByCategoryAsync(id);
             return View(posts);
         }
