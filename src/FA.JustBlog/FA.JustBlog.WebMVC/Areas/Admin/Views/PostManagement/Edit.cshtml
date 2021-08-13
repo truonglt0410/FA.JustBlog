@@ -17,7 +17,7 @@
         <div class="form-group col-md-6">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label" })
             <div>
-                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", id = "input-title" } })
                 @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div class="form-group col-md-6">
             @Html.LabelFor(model => model.UrlSlug, htmlAttributes: new { @class = "control-label" })
             <div>
-                @Html.EditorFor(model => model.UrlSlug, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.UrlSlug, new { htmlAttributes = new { @class = "form-control", @readonly = true, id="input-urlslug" } })
                 @Html.ValidationMessageFor(model => model.UrlSlug, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -124,9 +124,10 @@
 @section scripts {
     <script src="~/Assets/js/ckeditor/ckeditor.js"></script>
     <script src="~/Assets/js/ckeditor/ckeditorconfig.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.select-tag-multiple').select2();
-        });
+    <script src="~/assets/js/select-muitiple.js">
+        
+    </script>
+    <script src="~/assets/js/convert-urlslug.js">
+
     </script>
 } 
