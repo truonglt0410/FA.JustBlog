@@ -1284,7 +1284,6 @@
     <Content Include="Views\Tags\_PopularTags.cshtml" />
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Shared\_RightMenu.cshtml" />
-    <Content Include="Views\Categories\_CategoryRightMenu.cshtml" />
     <Content Include="Views\Shared\_AboutMe.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
@@ -1309,7 +1308,7 @@
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Posts\_PopularPosts.cshtml" />
     <Content Include="Views\Home\_PostSlider.cshtml" />
-    <Content Include="Views\Shared\_CommentArea.cshtml" />
+    <Content Include="Views\Categories\_CategoryRightMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

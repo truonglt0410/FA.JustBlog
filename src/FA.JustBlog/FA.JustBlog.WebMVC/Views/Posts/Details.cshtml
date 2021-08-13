@@ -1,6 +1,6 @@
 ﻿@model Post
 @{
-    ViewBag.Title = Model.Title;
+    ViewBag.Title = ViewBag.PostTitle;
 }
 
 <!--================Home Banner Area =================-->
@@ -10,10 +10,6 @@
         <div class="container">
             <div class="banner_content text-center">
                 <h2>@Model.Title</h2>
-                <div class="page_link">
-                    <a href="index.html">Home</a>
-                    <a href="single-blog.html">Post Details</a>
-                </div>
             </div>
         </div>
     </div>
@@ -31,7 +27,7 @@
                         <div class="float-left">
                             @foreach (var item in Model.Tags)
                             {
-                                <a href="@Url.Action("Details", "Tags", new { id = item.Id})">
+                                <a href="@Url.Action("Details", "Tags", new { urlSlug = item.UrlSlug})">
                                     @item.Name
                                 </a>
                             }
@@ -42,7 +38,7 @@
                         <p>@Html.Raw(Model.PostContent)</p>
                     </div>
                     <div class="news_d_footer">
-
+                        <p><i class="fas fa-calendar-alt"></i> @Model.PublishedDate.ToString("MMM dd yyyy") - @ViewBag.PublishedDate</p>
                         <div class="news_socail ml-auto">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -61,7 +57,7 @@
                             <div class="single-comment justify-content-between d-flex">
                                 <div class="user justify-content-between d-flex">
                                     <div class="thumb">
-                                        <img src="img/blog/c1.jpg" alt="">
+                                        <img src="~/App_Themes/fantom/img/blog/c1.jpg" alt="">
                                     </div>
                                     <div class="desc">
                                         <h5><a href="#">@item.Name</a></h5>

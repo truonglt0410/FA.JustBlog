@@ -18,11 +18,14 @@ namespace FA.JustBlog.WebMVC.Controllers
             _categoryServices = categoryServices;
         }
 
-        public async Task<ActionResult> Details(Guid id)
+        public async Task<ActionResult> Details(string urlSlug)
         {
-            var category = await _categoryServices.GetByIdAsync(id);
-            //ViewBag.CategoryName = category.Name;
-            var posts = await _postServices.GetPostsByCategoryAsync(id);
+            var category = await _categoryServices.GetCategoryByUrlSlugAsync(urlSlug);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            var posts = await _postServices.GetPostsByCategoryAsync(category.Id);
             return View(posts);
         }
         public ActionResult CategoryRightMenu()
@@ -31,10 +34,11 @@ namespace FA.JustBlog.WebMVC.Controllers
             {
                 Id = x.Id,
                 Name = x.Name,
-                PostCount = x.Posts.Count
+                PostCount = x.Posts.Count,
+                UrlSlug = x.UrlSlug
+
             }).OrderByDescending(c => c.PostCount);
             return PartialView("_CategoryRightMenu", categoriesRightMenuViewModel);
-
         }
     }
 }
