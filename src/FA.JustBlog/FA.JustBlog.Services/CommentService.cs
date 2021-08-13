@@ -55,14 +55,16 @@ namespace FA.JustBlog.Services
             return await _unitOfWork.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Comment>> GetCommentsForPostAsync(Post post)
+        public Task<IEnumerable<Comment>> GetCommentsForPostAsync(Post post)
         {
-            return await _unitOfWork.CommentRepository.GetQuery().Where(x => x.PostId == post.Id).ToListAsync();
+            //return  _unitOfWork.CommentRepository.GetQuery().Where(x => x.PostId == post.Id).ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Comment>> GetCommentsForPostAsync(Guid postId)
+        public  Task<IEnumerable<Comment>> GetCommentsForPostAsync(Guid postId)
         {
-            return await _unitOfWork.CommentRepository.GetQuery().Where(x => x.PostId == postId).ToListAsync();
+            //return  _unitOfWork.CommentRepository.GetQuery().Where(x => x.PostId == postId).ToListAsync();
+            throw new NotImplementedException();
         }
     }
 }
