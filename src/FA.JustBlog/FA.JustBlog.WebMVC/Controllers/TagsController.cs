@@ -16,10 +16,10 @@ namespace FA.JustBlog.WebMVC.Controllers
             _postServices = postServices;
         }
 
-        public async Task<ActionResult> Details(Guid id)
+        public async Task<ActionResult> Details(string urlSlug)
         {
-            var tag = await _tagServices.GetByIdAsync(id);
-            var posts = await _postServices.GetPostsByTagAsync(id);
+            var tag = await _tagServices.GetTagByUrlSlugAsync(urlSlug);
+            var posts = await _postServices.GetPostsByTagAsync(tag.Id);
             ViewBag.TagName = tag.Name;
             return View(posts);
         }

@@ -9,5 +9,7 @@ namespace FA.JustBlog.WebMVC.ViewModels
         public string Name { get; set; }
 
         public int PostCount { get; set; }
+
+        public string UrlSlug { get; set; }
     }
 }

@@ -47,12 +47,8 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="@Url.Action("Index", "Home", new { area = "" })">Home <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About", "Home", new { area = "" })">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Contact", "Home", new { area = "" })">Contact</a>
-                            </li>
+                            @Html.Action("Menu", "Home", new { area = ""})
+
                             @if (Request.IsAuthenticated && User.IsInRole("Admin"))
                             {
                                 <li class="nav-item dropdown">
@@ -63,7 +59,7 @@
                                         <a class="dropdown-item" href="@Url.Action("Index", "UsersAdmin", new { area = "Identity" })">Users Admin</a>
                                         <a class="dropdown-item" href="@Url.Action("Index", "RolesAdmin", new { area = "Identity" })">Roles Admin</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Manager</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index", "Manage", new { area = "" })">Manager</a>
                                     </div>
                                 </li>
 

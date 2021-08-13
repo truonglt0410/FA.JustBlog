@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
 {
+    [Authorize]
     public class PostManagementController : Controller
     {
         private readonly IPostService _postServices;
@@ -34,6 +35,7 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
             ViewData["CurrentSort"] = sortOrder;
             ViewData["TitleSortParm"] = string.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
             ViewData["UrlSlugSortParm"] = sortOrder == "UrlSlug" ? "urlSlug_desc" : "UrlSlug";
+            ViewData["ViewsCountSortParm"] = sortOrder == "ViewsCount" ? "viewsCount_desc" : "ViewsCount";
             ViewData["PublishedSortParm"] = sortOrder == "Published" ? "published_desc" : "Published";
             ViewData["PublishedDateSortParm"] = sortOrder == "PublishedDate" ? "publishedDate_desc" : "PublishedDate";
             ViewData["UpdatedAtSortParm"] = sortOrder == "UpdatedAt" ? "updatedAt_desc" : "UpdatedAt";
@@ -70,6 +72,12 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
                     break;
                 case "urlSlug_desc":
                     orderBy = q => q.OrderByDescending(c => c.UrlSlug);
+                    break;
+                case "ViewsCount":
+                    orderBy = q => q.OrderBy(c => c.ViewCount);
+                    break;
+                case "viewsCount_desc":
+                    orderBy = q => q.OrderByDescending(c => c.ViewCount);
                     break;
                 case "Published":
                     orderBy = q => q.OrderBy(c => c.Published);

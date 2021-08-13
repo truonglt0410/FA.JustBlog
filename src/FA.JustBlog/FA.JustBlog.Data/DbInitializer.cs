@@ -118,11 +118,29 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "MCSE boot camps have its supporters and its detractors",
-                    UrlSlug = "MCSE-boot-camps-have-its-supporters-and-its-detractors",
-                    ShortDescription = "MCSE boot camps have its supporters and",
+                    Title = "Announcing TypeScript 4.4 RC",
+                    UrlSlug = "announcing-typescript-44-rc",
+                    ShortDescription = "This is a step by step tutorial on how ",
                     ImageUrl = "blog-1.jpg",
-                    PostContent = "Content post 01",
+                    PostContent = "In JavaScript, we often have to probe a variable " +
+                    "in different ways to see if it has a more specific type that we " +
+                    "can use. TypeScript understands these checks and calls them type " +
+                    "guards. Instead of having to convince TypeScript of a variable’s " +
+                    "type whenever we use it, the type-checker leverages something called " +
+                    "control flow analysis to deduce the type within every language " +
+                    "construct.In previous versions of TypeScript, this would be an " +
+                    "error – even though argIsString was assigned the value of a type " +
+                    "guard, TypeScript simply lost that information. That’s unfortunate " +
+                    "since we might want to re-use the same check in several places. " +
+                    "To get around that, users often have to repeat themselves or " +
+                    "use type assertions (casts).In TypeScript 4.4, that is no longer " +
+                    "the case. The above example works with no errors! When TypeScript " +
+                    "sees that we are testing a constant value, it will do a little bit " +
+                    "of extra work to see if it contains a type guard. If that type guard " +
+                    "operates on a const, a readonly property, or an un-modified parameter, " +
+                    "then TypeScript is able to narrow that value appropriately.Different " +
+                    "sorts of type guard conditions are preserved – not just typeof checks." +
+                    "For example, checks on discriminated unions work like a charm.",
                     PublishedDate = DateTime.Now,
                     IsDeleted = false,
                     Published = true,
@@ -136,11 +154,29 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "MCSE boot camps have its supporters and its detractors",
-                    UrlSlug = "MCSE-boot-camps-have-its-supporters-and-its-detractors",
-                    ShortDescription = "MCSE boot camps have its supporters",
+                    Title = "Jetpack Window Manager alpha10 update",
+                    UrlSlug = "jetpack-window-manager-alpha10-update",
+                    ShortDescription = "This is a step by step tutorial on how ",
                     ImageUrl = "blog-2.jpg",
-                    PostContent = "Content post 02",
+                    PostContent = "In JavaScript, we often have to probe a variable " +
+                    "in different ways to see if it has a more specific type that we " +
+                    "can use. TypeScript understands these checks and calls them type " +
+                    "guards. Instead of having to convince TypeScript of a variable’s " +
+                    "type whenever we use it, the type-checker leverages something called " +
+                    "control flow analysis to deduce the type within every language " +
+                    "construct.In previous versions of TypeScript, this would be an " +
+                    "error – even though argIsString was assigned the value of a type " +
+                    "guard, TypeScript simply lost that information. That’s unfortunate " +
+                    "since we might want to re-use the same check in several places. " +
+                    "To get around that, users often have to repeat themselves or " +
+                    "use type assertions (casts).In TypeScript 4.4, that is no longer " +
+                    "the case. The above example works with no errors! When TypeScript " +
+                    "sees that we are testing a constant value, it will do a little bit " +
+                    "of extra work to see if it contains a type guard. If that type guard " +
+                    "operates on a const, a readonly property, or an un-modified parameter, " +
+                    "then TypeScript is able to narrow that value appropriately.Different " +
+                    "sorts of type guard conditions are preserved – not just typeof checks." +
+                    "For example, checks on discriminated unions work like a charm.",
                     PublishedDate = DateTime.Now,
                     IsDeleted = false,
                     Published = true,
@@ -154,11 +190,29 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "Which is the best website platform",
-                    UrlSlug = "which-is-the-best-website-platform",
-                    ShortDescription = "WordPress is free, open source",
+                    Title = "The New JavaScript/TypeScript Experience in Visual Studio 2022 Preview 3",
+                    UrlSlug = "the-new-javascript-typescript-experience-in-visual-studio-2022-preview-3",
+                    ShortDescription = "This is a step by step tutorial on how ",
                     ImageUrl = "blog-3.jpg",
-                    PostContent = "Content post 03",
+                    PostContent = "In JavaScript, we often have to probe a variable " +
+                    "in different ways to see if it has a more specific type that we " +
+                    "can use. TypeScript understands these checks and calls them type " +
+                    "guards. Instead of having to convince TypeScript of a variable’s " +
+                    "type whenever we use it, the type-checker leverages something called " +
+                    "control flow analysis to deduce the type within every language " +
+                    "construct.In previous versions of TypeScript, this would be an " +
+                    "error – even though argIsString was assigned the value of a type " +
+                    "guard, TypeScript simply lost that information. That’s unfortunate " +
+                    "since we might want to re-use the same check in several places. " +
+                    "To get around that, users often have to repeat themselves or " +
+                    "use type assertions (casts).In TypeScript 4.4, that is no longer " +
+                    "the case. The above example works with no errors! When TypeScript " +
+                    "sees that we are testing a constant value, it will do a little bit " +
+                    "of extra work to see if it contains a type guard. If that type guard " +
+                    "operates on a const, a readonly property, or an un-modified parameter, " +
+                    "then TypeScript is able to narrow that value appropriately.Different " +
+                    "sorts of type guard conditions are preserved – not just typeof checks." +
+                    "For example, checks on discriminated unions work like a charm.",
                     PublishedDate = DateTime.Now,
                     IsDeleted = false,
                     Published = true,
@@ -176,7 +230,25 @@ namespace FA.JustBlog.Data
                     UrlSlug = "how-to-make-the-most-of-this-create-a-website-tutorial",
                     ShortDescription = "This is a step by step tutorial on how ",
                     ImageUrl = "blog-4.jpg",
-                    PostContent = "Content post 04",
+                    PostContent = "In JavaScript, we often have to probe a variable " +
+                    "in different ways to see if it has a more specific type that we " +
+                    "can use. TypeScript understands these checks and calls them type " +
+                    "guards. Instead of having to convince TypeScript of a variable’s " +
+                    "type whenever we use it, the type-checker leverages something called " +
+                    "control flow analysis to deduce the type within every language " +
+                    "construct.In previous versions of TypeScript, this would be an " +
+                    "error – even though argIsString was assigned the value of a type " +
+                    "guard, TypeScript simply lost that information. That’s unfortunate " +
+                    "since we might want to re-use the same check in several places. " +
+                    "To get around that, users often have to repeat themselves or " +
+                    "use type assertions (casts).In TypeScript 4.4, that is no longer " +
+                    "the case. The above example works with no errors! When TypeScript " +
+                    "sees that we are testing a constant value, it will do a little bit " +
+                    "of extra work to see if it contains a type guard. If that type guard " +
+                    "operates on a const, a readonly property, or an un-modified parameter, " +
+                    "then TypeScript is able to narrow that value appropriately.Different " +
+                    "sorts of type guard conditions are preserved – not just typeof checks." +
+                    "For example, checks on discriminated unions work like a charm.",
                     PublishedDate = DateTime.Now,
                     IsDeleted = false,
                     Published = true,
@@ -190,11 +262,29 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "How much does a WordPress website cost",
-                    UrlSlug = "how-much-does-a-WordPress-website-cost",
+                    Title = "How Do ToF Based Depth Cameras Improve Our Life",
+                    UrlSlug = "how-do-tof-based-depth-cameras-improve-our-life",
                     ShortDescription = "The answer to this question really ",
                     ImageUrl = "blog-5.jpg",
-                    PostContent = "Content post 05",
+                    PostContent = "In JavaScript, we often have to probe a variable " +
+                    "in different ways to see if it has a more specific type that we " +
+                    "can use. TypeScript understands these checks and calls them type " +
+                    "guards. Instead of having to convince TypeScript of a variable’s " +
+                    "type whenever we use it, the type-checker leverages something called " +
+                    "control flow analysis to deduce the type within every language " +
+                    "construct.In previous versions of TypeScript, this would be an " +
+                    "error – even though argIsString was assigned the value of a type " +
+                    "guard, TypeScript simply lost that information. That’s unfortunate " +
+                    "since we might want to re-use the same check in several places. " +
+                    "To get around that, users often have to repeat themselves or " +
+                    "use type assertions (casts).In TypeScript 4.4, that is no longer " +
+                    "the case. The above example works with no errors! When TypeScript " +
+                    "sees that we are testing a constant value, it will do a little bit " +
+                    "of extra work to see if it contains a type guard. If that type guard " +
+                    "operates on a const, a readonly property, or an un-modified parameter, " +
+                    "then TypeScript is able to narrow that value appropriately.Different " +
+                    "sorts of type guard conditions are preserved – not just typeof checks." +
+                    "For example, checks on discriminated unions work like a charm.",
                     PublishedDate = DateTime.Now,
                     IsDeleted = false,
                     Published = true,
@@ -208,11 +298,29 @@ namespace FA.JustBlog.Data
                 new Post
                 {
                     Id = Guid.NewGuid(),
-                    Title = "How Many WordPress Categories Should You Have",
-                    UrlSlug = "How-Many-WordPress-Categories-Should-You-Have",
+                    Title = "Now in private preview: optimize your data distribution with hierarchical partition keys",
+                    UrlSlug = "now-in-private-preview-optimize-your-data-distribution-with-hierarchical-partition-keys",
                     ShortDescription = "There’s no specific number of categories ",
                     ImageUrl = "blog-6.jpg",
-                    PostContent = "Content post 06",
+                    PostContent = "In JavaScript, we often have to probe a variable " +
+                    "in different ways to see if it has a more specific type that we " +
+                    "can use. TypeScript understands these checks and calls them type " +
+                    "guards. Instead of having to convince TypeScript of a variable’s " +
+                    "type whenever we use it, the type-checker leverages something called " +
+                    "control flow analysis to deduce the type within every language " +
+                    "construct.In previous versions of TypeScript, this would be an " +
+                    "error – even though argIsString was assigned the value of a type " +
+                    "guard, TypeScript simply lost that information. That’s unfortunate " +
+                    "since we might want to re-use the same check in several places. " +
+                    "To get around that, users often have to repeat themselves or " +
+                    "use type assertions (casts).In TypeScript 4.4, that is no longer " +
+                    "the case. The above example works with no errors! When TypeScript " +
+                    "sees that we are testing a constant value, it will do a little bit " +
+                    "of extra work to see if it contains a type guard. If that type guard " +
+                    "operates on a const, a readonly property, or an un-modified parameter, " +
+                    "then TypeScript is able to narrow that value appropriately.Different " +
+                    "sorts of type guard conditions are preserved – not just typeof checks." +
+                    "For example, checks on discriminated unions work like a charm.",
                     PublishedDate = DateTime.Now,
                     IsDeleted = false,
                     Published = true,
