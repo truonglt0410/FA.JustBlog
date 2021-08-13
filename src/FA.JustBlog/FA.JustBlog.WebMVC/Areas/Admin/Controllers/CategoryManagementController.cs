@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
 {
+    [Authorize]
     public class CategoryManagementController : Controller
     {
         private readonly ICategoryService _categoryServices;

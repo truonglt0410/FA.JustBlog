@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
 {
+    [Authorize]
     public class PostManagementController : Controller
     {
         private readonly IPostService _postServices;
