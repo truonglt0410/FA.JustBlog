@@ -15,15 +15,15 @@ namespace FA.JustBlog.Services
 
         }
 
-        public override IEnumerable<Category> GetAll()
-        {
-            return _unitOfWork.GenericRepository<Category>().GetQuery().Include("Posts").ToList();
-        }
+        //public override IEnumerable<Category> GetAll()
+        //{
+        //    return _unitOfWork.GenericRepository<Category>().GetQuery().Include("Posts").ToList();
+        //}
 
-        public async override Task<IEnumerable<Category>> GetAllAsync()
-        {
-            return await _unitOfWork.GenericRepository<Category>().GetQuery().Include("Posts").ToListAsync();
-        }
+        //public async override Task<IEnumerable<Category>> GetAllAsync()
+        //{
+        //    return await _unitOfWork.GenericRepository<Category>().GetQuery().Include("Posts").ToListAsync();
+        //}
 
         public Category GetCategoryByUrlSlug(string urlSlug)
         {
