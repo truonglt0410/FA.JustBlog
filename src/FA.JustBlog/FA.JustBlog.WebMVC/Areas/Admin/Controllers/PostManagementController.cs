@@ -144,7 +144,7 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
                     
                     Tags = await GetSelectedTagFromIds(postViewModel.SelectedTagIds)
                 };
-                var result = await _postServices.AddAsync(post);
+                var result =  _postServices.Add(post);
 
                 return RedirectToAction("Index");
             }
